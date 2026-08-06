@@ -1,0 +1,21 @@
+.desktop {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url("../../assets/wallpapers/Clouds_\(Windows_95\).png");
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+.desktop-icons {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+    padding: 12px;
+}

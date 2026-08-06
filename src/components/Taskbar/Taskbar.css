@@ -1,0 +1,104 @@
+.taskbar {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 40px;
+
+    background: #c0c0c0;
+
+    display: flex;
+    align-items: center;
+
+    padding: 4px;
+
+    border-top: 2px solid white;
+}
+
+.start-button {
+    height: 30px;
+
+    padding: 0 14px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.start-button:active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.taskbar-spacer {
+    flex: 1;
+}
+.clock {
+    padding: 4px 8px;
+    min-width: 82px;
+    text-align: center;
+
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+
+    background: #c0c0c0;
+
+    font-size: 11px;
+}
+.taskbar-tasks {
+    display: flex;
+    gap: 4px;
+    margin-left: 6px;
+    flex: 1;
+    overflow-x: auto;
+}
+
+.taskbar-task-button {
+    height: 30px;
+    min-width: 120px;
+    max-width: 160px;
+    padding: 0 8px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    cursor: pointer;
+}
+
+/* Active/Pressed state for windows currently in focus */
+.taskbar-task-button.active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    background: linear-gradient(45deg, #dfdfdf 25%, #c0c0c0 25%);
+    background-size: 2px 2px;
+    font-weight: bold;
+}

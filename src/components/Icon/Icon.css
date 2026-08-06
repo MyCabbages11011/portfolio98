@@ -1,0 +1,71 @@
+.desktop-icon { 
+    width: 72px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+    margin-bottom: 18px;
+}
+
+.desktop-icon-image {
+    width: 32px;
+    height: 32px;
+
+    image-rendering: pixelated;
+
+}
+
+.desktop-icon-title {
+    color: white;
+
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+
+    text-align: center;
+
+    text-shadow: 1px 1px black;
+
+    padding: 1px 3px;
+}
+.desktop-icon { 
+    width: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    margin-bottom: 18px;
+    padding: 4px;
+    border: 1px dotted transparent; /* Reserve space for selection outline */
+}
+
+/* Selected state */
+.desktop-icon.selected {
+    background-color: rgba(0, 0, 128, 0.35); /* Classic Win98 navy selection */
+    border: 1px dotted white;
+}
+
+.desktop-icon.selected .desktop-icon-title {
+    background-color: #000080; /* Solid navy block behind text when selected */
+    color: white;
+}
+
+.desktop-icon-image {
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+}
+
+.desktop-icon-title {
+    color: white;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    padding: 1px 3px;
+}
