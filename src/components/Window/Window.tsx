@@ -65,7 +65,6 @@ function Window({ id, title, minimized, maximized, children }: WindowProps) {
                             aria-label={maximized ? "Restore" : "Maximize"}
                             onClick={handleMaximize}
                         >
-                            {/* Switch between maximize box and restore double-box */}
                             {maximized ? "❐" : "□"}
                         </button>
                         <button 
