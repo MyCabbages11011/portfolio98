@@ -1,0 +1,53 @@
+.win98-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    background: white;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    align-content: flex-start;
+}
+
+.gallery-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    background: #c0c0c0;
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    padding: 6px;
+}
+
+.gallery-image-frame {
+    width: 100px;
+    height: 80px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.gallery-image-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.gallery-caption {
+    margin-top: 6px;
+    font-size: 10px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    text-align: center;
+    color: black;
+    word-break: break-word;
+}
