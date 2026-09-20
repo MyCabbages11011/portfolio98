@@ -1,8 +1,3 @@
-import computer from "../public/assets/icons/computer_explorer_cool-0.png";
-import folder from "../public/assets/icons/directory_closed-4.png";
-import notepad from "../public/assets/icons/notepad-4.png";
-import recycleBin from "../public/assets/icons/recycle_bin_full-4.png";
-
 export interface DesktopIconData {
   id: number;
   title: string;
@@ -13,22 +8,22 @@ const desktopIcons: DesktopIconData[] = [
   {
     id: 1,
     title: "My Computer",
-    icon: computer,
+    icon: `${import.meta.env.BASE_URL}assets/icons/computer_explorer_cool-0.png`,
   },
   {
     id: 2,
     title: "Portfolio",
-    icon: folder,
+    icon: `${import.meta.env.BASE_URL}assets/icons/directory_closed-4.png`,
   },
   {
     id: 3,
     title: "About Me",
-    icon: notepad,
+    icon: `${import.meta.env.BASE_URL}assets/icons/notepad-4.png`,
   },
   {
     id: 4,
     title: "Recycle Bin",
-    icon: recycleBin,
+    icon: `${import.meta.env.BASE_URL}assets/icons/recycle_bin_full-4.png`,
   },
 ];
 

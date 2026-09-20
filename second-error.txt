@@ -1,0 +1,6 @@
+
+> site98_portfolio@0.0.0 build
+> tsc -b && vite build
+
+vite v8.2.0 building client environment for production...
+[2Ktransforming...✓ 49 modules transformed.
