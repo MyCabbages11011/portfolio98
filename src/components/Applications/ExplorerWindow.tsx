@@ -85,7 +85,10 @@ function ExplorerWindow({
           disabled={currentIndex === 0}
         >
           <span className="tb-arrow">
-            <img src="src/assets/icons/browse-left-arrow.png" alt="Back" />
+            <img
+              src="${import.meta.env.BASE_URL}src/public/assets/icons/browse-left-arrow.png"
+              alt="Back"
+            />
           </span>{" "}
           Back
         </button>
@@ -95,7 +98,10 @@ function ExplorerWindow({
           disabled={currentIndex === history.length - 1}
         >
           <span className="tb-arrow">
-            <img src="src/assets/icons/browse-right-arrow.png" alt="Forward" />
+            <img
+              src="${import.meta.env.BASE_URL}src/public/assets/icons/browse-right-arrow.png"
+              alt="Forward"
+            />
           </span>{" "}
           Forward
         </button>
