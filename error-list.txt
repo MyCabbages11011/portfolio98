@@ -1,0 +1,25 @@
+
+> site98_portfolio@0.0.0 build
+> tsc -b && vite build
+
+src/components/Desktop/Desktop.tsx(24,25): error TS2322: Type 'number' is not assignable to type 'string'.
+src/components/Desktop/Desktop.tsx(27,37): error TS2367: This comparison appears to be unintentional because the types 'string | null' and 'number' have no overlap.
+src/components/Desktop/Desktop.tsx(28,59): error TS2345: Argument of type 'number' is not assignable to parameter of type 'SetStateAction<string | null>'.
+src/components/Desktop/Desktop.tsx(38,40): error TS2339: Property 'minimized' does not exist on type 'WindowData'.
+src/components/Desktop/Desktop.tsx(39,40): error TS2339: Property 'maximized' does not exist on type 'WindowData'.
+src/components/Taskbar/Taskbar.tsx(33,24): error TS2322: Type '"TOGGLE_MINIMIZE"' is not assignable to type '"OPEN_WINDOW" | "CLOSE_WINDOW" | "FOCUS_WINDOW"'.
+src/components/Taskbar/Taskbar.tsx(40,28): error TS2322: Type '"TOGGLE_MINIMIZE"' is not assignable to type '"OPEN_WINDOW" | "CLOSE_WINDOW" | "FOCUS_WINDOW"'.
+src/components/Taskbar/Taskbar.tsx(56,66): error TS2339: Property 'minimized' does not exist on type 'WindowData'.
+src/components/Taskbar/Taskbar.tsx(62,72): error TS2339: Property 'minimized' does not exist on type 'WindowData'.
+src/components/Window/Window.tsx(25,20): error TS2322: Type '"TOGGLE_MINIMIZE"' is not assignable to type '"OPEN_WINDOW" | "CLOSE_WINDOW" | "FOCUS_WINDOW"'.
+src/components/Window/Window.tsx(30,20): error TS2322: Type '"TOGGLE_MAXIMIZE"' is not assignable to type '"OPEN_WINDOW" | "CLOSE_WINDOW" | "FOCUS_WINDOW"'.
+src/context/WindowContext.tsx(1,56): error TS1484: 'ReactNode' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/context/WindowContext.tsx(47,21): error TS2322: Type 'WindowData | { zIndex: number; minimized: boolean; maximized: boolean; id: string; title: string; content: ReactNode; }' is not assignable to type 'WindowData'.
+  Object literal may only specify known properties, and 'minimized' does not exist in type 'WindowData'.
+src/context/WindowContext.tsx(47,21): error TS2353: Object literal may only specify known properties, and 'minimized' does not exist in type 'WindowData'.
+src/context/WindowContext.tsx(63,14): error TS2678: Type '"TOGGLE_MINIMIZE"' is not comparable to type '"OPEN_WINDOW" | "CLOSE_WINDOW" | "FOCUS_WINDOW"'.
+src/context/WindowContext.tsx(65,33): error TS2339: Property 'payload' does not exist on type 'never'.
+src/context/WindowContext.tsx(65,65): error TS2339: Property 'minimized' does not exist on type 'WindowData'.
+src/context/WindowContext.tsx(68,14): error TS2678: Type '"TOGGLE_MAXIMIZE"' is not comparable to type '"OPEN_WINDOW" | "CLOSE_WINDOW" | "FOCUS_WINDOW"'.
+src/context/WindowContext.tsx(70,33): error TS2339: Property 'payload' does not exist on type 'never'.
+src/context/WindowContext.tsx(70,65): error TS2339: Property 'maximized' does not exist on type 'WindowData'.
