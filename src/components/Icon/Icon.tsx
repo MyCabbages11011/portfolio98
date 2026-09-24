@@ -85,7 +85,7 @@ function Icon({ id, title, icon, isSelected, onSelect }: IconProps) {
               >
                 <span style={{ fontSize: "28px" }}>
                   <img
-                    src="src/assets/icons/directory_closed-4.png"
+                    src="assets/icons/directory_closed-4.png"
                     width="32"
                     height="32"
                     alt="Folder"
@@ -143,7 +143,7 @@ function Icon({ id, title, icon, isSelected, onSelect }: IconProps) {
           >
             <span style={{ fontSize: "28px" }}>
               {" "}
-              <img src="src/assets/icons/notepad-4.png" />
+              <img src="assets/icons/notepad-4.png" />
             </span>
             <p style={{ margin: "4px 0 0 0", fontSize: "11px" }}>About Me</p>
           </div>
@@ -166,7 +166,7 @@ function Icon({ id, title, icon, isSelected, onSelect }: IconProps) {
           >
             <span style={{ fontSize: "28px" }}>
               <img
-                src="src/assets/icons/directory_closed-4.png"
+                src="assets/icons/directory_closed-4.png"
                 width="32"
                 height="32"
                 alt="Folder"

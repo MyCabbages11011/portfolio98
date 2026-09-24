@@ -51,7 +51,7 @@ function PortfolioBlogList() {
           >
             <span style={{ fontSize: "28px" }}>
               <img
-                src="src\assets\icons\message_file-0.png"
+                src="assets\icons\message_file-0.png"
                 width="32"
                 height="32"
                 alt="Folder"

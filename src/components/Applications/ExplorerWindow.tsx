@@ -85,10 +85,7 @@ function ExplorerWindow({
           disabled={currentIndex === 0}
         >
           <span className="tb-arrow">
-            <img
-              src="${import.meta.env.BASE_URL}src/public/assets/icons/browse-left-arrow.png"
-              alt="Back"
-            />
+            <img src="assets/icons/browse-left-arrow.png" alt="Back" />
           </span>{" "}
           Back
         </button>
@@ -98,10 +95,7 @@ function ExplorerWindow({
           disabled={currentIndex === history.length - 1}
         >
           <span className="tb-arrow">
-            <img
-              src="${import.meta.env.BASE_URL}src/public/assets/icons/browse-right-arrow.png"
-              alt="Forward"
-            />
+            <img src="assets/icons/browse-right-arrow.png" alt="Forward" />
           </span>{" "}
           Forward
         </button>
@@ -112,56 +106,53 @@ function ExplorerWindow({
           disabled={currentPath === "C:\\" || currentPath === "C:"}
         >
           <span className="tb-icon">
-            <img src="src/assets/icons/browse-directory-up.png" alt="Up" />
+            <img src="assets/icons/browse-directory-up.png" alt="Up" />
           </span>{" "}
           Up
         </button>
         <div className="tb-separator" />
         <button className="tb-btn">
           <span className="tb-icon">
-            <img src="src/assets/icons/browse-scissor.png" alt="Cut" />
+            <img src="assets/icons/browse-scissor.png" alt="Cut" />
           </span>
           Cut
         </button>
         <button className="tb-btn">
           <span className="tb-icon">
-            <img src="src/assets/icons/browse-copy.png" alt="Copy" />
+            <img src="assets/icons/browse-copy.png" alt="Copy" />
           </span>
           Copy
         </button>
         <button className="tb-btn">
           <span className="tb-icon">
-            <img src="src/assets/icons/browse-paste.png" alt="Paste" />
+            <img src="assets/icons/browse-paste.png" alt="Paste" />
           </span>
           Paste
         </button>
         <div className="tb-separator" />
         <button className="tb-btn">
           <span className="tb-icon">
-            <img src="src/assets/icons/browse-undo.png" alt="Undo" />
+            <img src="assets/icons/browse-undo.png" alt="Undo" />
           </span>
           Undo
         </button>
         <div className="tb-separator" />
         <button className="tb-btn">
           <span className="tb-icon">
-            <img src="src/assets/icons/browse-delete.png" alt="Delete" />
+            <img src="assets/icons/browse-delete.png" alt="Delete" />
           </span>
           Delete
         </button>
         <button className="tb-btn">
           <span className="tb-icon">
-            <img
-              src="src/assets/icons/browse-properties.png"
-              alt="Properties"
-            />
+            <img src="assets/icons/browse-properties.png" alt="Properties" />
           </span>
           Properties
         </button>
         <div className="tb-separator" />
         <button className="tb-btn">
           <span className="tb-icon">
-            <img src="src/assets/icons/browse-views.png" alt="Views" />
+            <img src="assets/icons/browse-views.png" alt="Views" />
           </span>
           Views ▾
         </button>
@@ -171,7 +162,7 @@ function ExplorerWindow({
         <div className="address-input-container">
           <span className="folder-mini-icon">
             <img
-              src="src/assets/icons/directory_closed-4.png"
+              src="assets/icons/directory_closed-4.png"
               width="16"
               height="16"
               alt="Folder"
@@ -187,7 +178,7 @@ function ExplorerWindow({
           <div className="sidebar-title-block">
             <span className="sidebar-folder-icon">
               <img
-                src="src/assets/icons/directory_closed-4.png"
+                src="assets/icons/directory_closed-4.png"
                 width="32"
                 height="32"
                 alt="Folder"
