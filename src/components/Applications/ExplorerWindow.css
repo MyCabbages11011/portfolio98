@@ -146,7 +146,7 @@
   width: 160px;
   min-width: 160px;
   height: 100%;
-  background-image: url("../src/assets/wvleft.bmp");
+  background-image: url("../../assets/wvleft.bmp");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: white;
@@ -173,6 +173,7 @@
   font-weight: bold;
   margin: 0;
   word-break: break-all;
+  color: #363636;
 }
 
 .sidebar-gradient-line {
@@ -185,7 +186,7 @@
   font-size: 10.5px;
   line-height: 1.3;
   margin: 0;
-  color: #e0e0e0;
+  color: #363636;
 }
 
 .explorer-content-grid {
