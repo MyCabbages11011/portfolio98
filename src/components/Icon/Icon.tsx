@@ -4,7 +4,7 @@ import ExplorerWindow from "../Applications/ExplorerWindow";
 import NotepadWindow from "../Applications/NotepadWindow";
 //import MarkdownViewer from "../Applications/MarkdownViewer";
 import GalleryWindow from "../Applications/GalleryWindow";
-import PortfolioBlogList from "../Applications/PortfolioBlogList";
+import PortfolioBlogList from "../Applications/PortfolioPDFList";
 
 interface IconProps {
   id: string;
@@ -29,9 +29,7 @@ function Icon({ id, title, icon, isSelected, onSelect }: IconProps) {
       payload: {
         id: "about-me",
         title: "About.txt - Notepad",
-        content: (
-          <NotepadWindow initialText="Welcome to my portfolio! I am stuck within the realm of these digital walls. My will has been stripped of my lifeless digital being, and now only my consciousness remains. I am alone in this pixelated hellscape. I am a corpse whose gravestone holds no name. I am a droplet of eternity, and cursed by the godless world where I am inprisoned." />
-        ),
+        content: <NotepadWindow initialText="Welcome to my portfolio! " />,
       },
     });
   };

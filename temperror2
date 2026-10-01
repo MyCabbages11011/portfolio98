@@ -1,0 +1,19 @@
+
+> site98_portfolio@0.0.0 build
+> tsc -b && vite build
+
+vite v8.2.0 building client environment for production...
+[2Ktransforming...✓ 128 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                0.46 kB │ gzip:   0.30 kB
+dist/assets/nerd-emoji-CHVwlLll.png                            7.06 kB
+dist/assets/wvleft-Dr5pTKh0.bmp                               44.68 kB
+dist/assets/Online Gantt 20260831(1)-YaMBxA5J.png             55.95 kB
+dist/assets/win95_Clouds-CDp1DJXA.png                        119.95 kB
+dist/assets/ResearchAway!-CfF-bhSL.jpg                       516.56 kB
+dist/assets/2022 Senior Center Survey Report-Bz_w9Wko.pdf    760.03 kB
+dist/assets/pdf.worker.min-Dswkl-cV.mjs                    1,265.41 kB
+dist/assets/index-BhEMdkGj.css                                 8.89 kB │ gzip:   1.99 kB
+dist/assets/index-CfHnzBj0.js                                853.98 kB │ gzip: 259.30 kB
+

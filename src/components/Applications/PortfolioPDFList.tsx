@@ -1,19 +1,18 @@
 import { useWindows } from "../../context/WindowContext";
-import MarkdownViewer from "./MarkdownViewer";
+import PDFViewer from "./PDFViewer";
 import "./PortfolioBlogList.css";
 
-function PortfolioBlogList() {
+function PortfolioPDFList() {
   const { dispatch } = useWindows();
 
-  // Dynamically load all markdown files from src/content/blog/
-  const blogFiles = import.meta.glob<{ default: string }>(
-    "../../content/blog/*.md",
-    { query: "?raw", eager: true },
+  const pdfFiles = import.meta.glob<{ default: string }>(
+    "../../content/blog/*.pdf",
+    { query: "?url", eager: true },
   );
 
-  const posts = Object.keys(blogFiles).map((path) => {
+  const posts = Object.keys(pdfFiles).map((path) => {
     const fileName = path.split("/").pop() || "";
-    const title = fileName.replace(/\.md$/, "").replace(/[-_]/g, " ");
+    const title = fileName.replace(/\.pdf$/, "").replace(/[-_]/g, " ");
     return {
       fileName,
       title: title.charAt(0).toUpperCase() + title.slice(1),
@@ -23,7 +22,7 @@ function PortfolioBlogList() {
   return (
     <div className="portfolio-blog-list">
       {posts.length === 0 ? (
-        <p style={{ padding: "10px" }}>No markdown posts found.</p>
+        <p style={{ padding: "10px" }}>No Posts found.</p>
       ) : (
         posts.map((post) => (
           <div
@@ -42,19 +41,20 @@ function PortfolioBlogList() {
               dispatch({
                 type: "OPEN_WINDOW",
                 payload: {
-                  id: `blog-${post.fileName}`,
-                  title: `${post.fileName} - Viewer`,
-                  content: <MarkdownViewer fileName={post.fileName} />,
+                  id: `pdf-${post.fileName}`,
+                  title: `${post.title} - PDF Viewer`,
+                  content: <PDFViewer fileName={post.fileName} />,
                 },
               });
             }}
           >
             <span style={{ fontSize: "28px" }}>
+              {/* Change icon asset path if you have a specific PDF icon */}
               <img
-                src="assets\icons\message_file-0.png"
+                src="assets/icons/message_file-0.png"
                 width="32"
                 height="32"
-                alt="Folder"
+                alt="PDF File"
               />
             </span>
             <p style={{ margin: "4px 0 0 0", fontSize: "11px" }}>
@@ -67,4 +67,4 @@ function PortfolioBlogList() {
   );
 }
 
-export default PortfolioBlogList;
+export default PortfolioPDFList;

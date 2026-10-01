@@ -14,9 +14,12 @@
   },
   "dependencies": {
     "marked": "^18.0.9",
+    "pdfjs": "^2.5.4",
+    "pdfjs-dist": "^6.3.289",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-draggable": "^4.7.1",
+    "react-pdf": "^11.0.0",
     "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
