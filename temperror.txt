@@ -1,6 +1,0 @@
-
-> site98_portfolio@0.0.0 build
-> tsc -b && vite build
-
-src/components/Applications/PDFViewer.tsx(7,1): error TS2349: This expression is not callable.
-  Type 'String' has no call signatures.
