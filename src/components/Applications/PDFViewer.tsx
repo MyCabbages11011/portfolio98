@@ -15,7 +15,6 @@ interface PDFViewerProps {
 function PDFViewer({ fileName }: PDFViewerProps) {
   const [pdfUrl, setPdfUrl] = useState<string | null>(null);
   const [numPages, setNumPages] = useState<number | null>(null);
-  const [pageNumber, setPageNumber] = useState<number>(1);
   const [loadingError, setLoadingError] = useState<boolean>(false);
 
   useEffect(() => {
@@ -46,7 +45,6 @@ function PDFViewer({ fileName }: PDFViewerProps) {
 
   function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
     setNumPages(numPages);
-    setPageNumber(1);
   }
 
   if (loadingError || !pdfUrl) {
@@ -58,38 +56,26 @@ function PDFViewer({ fileName }: PDFViewerProps) {
   }
 
   return (
-    <div className="pdf-container">
+    <div
+      className="pdf-container"
+      style={{ overflowY: "auto", height: "100%", maxHeight: "80vh" }}
+    >
       <Document
         file={pdfUrl}
         onLoadSuccess={onDocumentLoadSuccess}
         loading={<p>Loading PDF...</p>}
       >
-        <Page
-          pageNumber={pageNumber}
-          renderTextLayer={true}
-          renderAnnotationLayer={true}
-        />
+        {numPages &&
+          Array.from({ length: numPages }, (_, index) => (
+            <div key={`page_${index + 1}`} style={{ marginBottom: "16px" }}>
+              <Page
+                pageNumber={index + 1}
+                renderTextLayer={true}
+                renderAnnotationLayer={true}
+              />
+            </div>
+          ))}
       </Document>
-
-      {numPages && (
-        <div className="pdf-controls">
-          <button
-            disabled={pageNumber <= 1}
-            onClick={() => setPageNumber((prev) => prev - 1)}
-          >
-            Previous
-          </button>
-          <span>
-            Page {pageNumber} of {numPages}
-          </span>
-          <button
-            disabled={pageNumber >= numPages}
-            onClick={() => setPageNumber((prev) => prev + 1)}
-          >
-            Next
-          </button>
-        </div>
-      )}
     </div>
   );
 }
