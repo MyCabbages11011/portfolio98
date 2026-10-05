@@ -22,7 +22,7 @@ function Icon({ id, title, icon, isSelected, onSelect }: IconProps) {
     onSelect();
   };
 
-  // Reusable handler for About Me to ensure consistency everywhere
+  // reusable handler
   const openAboutMe = () => {
     dispatch({
       type: "OPEN_WINDOW",
@@ -34,7 +34,7 @@ function Icon({ id, title, icon, isSelected, onSelect }: IconProps) {
     });
   };
 
-  // Reusable handler for Portfolio to ensure consistency everywhere
+  // another reusable handler
   const openPortfolio = () => {
     dispatch({
       type: "OPEN_WINDOW",
@@ -104,13 +104,11 @@ function Icon({ id, title, icon, isSelected, onSelect }: IconProps) {
     let windowContent = <p>Welcome to {title}!</p>;
     let windowTitle = title;
 
-    // Check if the clicked desktop item is "About Me"
     if (id === "about-me" || title.toLowerCase().includes("about me")) {
       openAboutMe();
       return;
     }
 
-    // Standard mapping for My Computer, Portfolio, etc.
     let pathString = `C:\\${title}`;
     if (id === "my-computer" || title.toLowerCase().includes("computer")) {
       pathString = "C:\\My Computer";

@@ -5,7 +5,7 @@ interface ExplorerWindowProps {
   title: string;
   path: string;
   children: React.ReactNode;
-  // Optional map of path strings to custom React components/views for subfolders
+  // optional map of path strings to custom react components/views for subfolders
   subfolderViews?: Record<string, React.ReactNode>;
 }
 
@@ -20,7 +20,7 @@ function ExplorerWindow({
 
   const currentPath = history[currentIndex];
 
-  // Determine what content to display based on the active path
+  // what content to display based on the active path
   let activeContent = children;
   if (currentPath !== initialPath && subfolderViews[currentPath]) {
     activeContent = subfolderViews[currentPath];
@@ -44,7 +44,6 @@ function ExplorerWindow({
       segments.pop();
       const parentPath = segments.join("\\") || "C:\\";
 
-      // Push parent path into history stack
       const newHistory = history.slice(0, currentIndex + 1);
       newHistory.push(parentPath);
       setHistory(newHistory);

@@ -66,7 +66,6 @@ function PDFViewer({ fileName }: PDFViewerProps) {
     );
   }
 
-  // Reusable PDF document renderer block
   const pdfDocumentContent = (
     <Document
       file={pdfUrl}

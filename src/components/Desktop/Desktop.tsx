@@ -10,7 +10,7 @@ function Desktop() {
   const { windows } = useWindows();
   const [selectedIconId, setSelectedIconId] = useState<string | null>(null);
 
-  // Clicking the background deselects any highlighted icon
+  // clicking background deselects any highlighted icon
   const handleDesktopClick = () => {
     setSelectedIconId(null);
   };

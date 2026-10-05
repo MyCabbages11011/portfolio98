@@ -15,15 +15,15 @@ function Taskbar() {
       const ampm = hours >= 12 ? "PM" : "AM";
 
       hours = hours % 12;
-      hours = hours ? hours : 12; // the hour '0' should be '12'
+      hours = hours ? hours : 12;
       const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
       const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
 
       setTime(`${hours}:${formattedMinutes}:${formattedSeconds} ${ampm}`);
     };
 
-    updateClock(); // Set immediately on mount
-    const timer = setInterval(updateClock, 1000); // Update every second
+    updateClock();
+    const timer = setInterval(updateClock, 1000);
 
     return () => clearInterval(timer);
   }, []);
