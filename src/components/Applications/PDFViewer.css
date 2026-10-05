@@ -1,0 +1,15 @@
+.pdf-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #525659;
+  padding: 20px 0;
+}
+
+.pdf-container .react-pdf__Page {
+  margin-bottom: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
