@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import Draggable from "react-draggable";
 import "./Window.css";
 import { useWindows } from "../../context/WindowContext";
@@ -14,6 +14,13 @@ interface WindowProps {
 function Window({ id, title, minimized, maximized, children }: WindowProps) {
   const { dispatch } = useWindows();
   const nodeRef = useRef<HTMLElement>(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleClose = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -36,7 +43,6 @@ function Window({ id, title, minimized, maximized, children }: WindowProps) {
 
   if (minimized) return null;
 
-  // The window markup content shared whether maximized or not
   const windowElement = (
     <section
       ref={nodeRef}
@@ -72,10 +78,8 @@ function Window({ id, title, minimized, maximized, children }: WindowProps) {
       <main className="window-content">{children}</main>
     </section>
   );
-
-  // If maximized, render without Draggable wrapper so it cleanly fills the screen area.
-  // When not maximized, wrap it in Draggable normally.
-  if (maximized) {
+  //disabled on max, or mobile
+  if (maximized || isMobile) {
     return windowElement;
   }
 
